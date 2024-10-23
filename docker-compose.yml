@@ -1,0 +1,14 @@
+version: '3'
+services:
+  app:
+    build: .
+    container_name: 'python3'
+    working_dir: '/root/opt'
+    ports:
+       - 8888:8888
+    tty: true
+    volumes:
+      - .:/root/opt
+    # command: 
+    #     python sample.py
+  #  jupyter lab --port=8888 --LabApp.token="" --allow-root --ip=0.0.0.0
